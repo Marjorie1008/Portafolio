@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Portafolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <h1>Bienvenid@ a mi portafolio</h1>
+        <button class="dark-toggle" onclick="toggleDarkMode()">🌙 Modo Oscuro</button>
+
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="sobre-mi.html">Sobre mí</a>
+            <a href="proyectos.html">Proyectos</a>
+            <a href="cuaderno.html">Cuaderno</a>
+            <a href="bibliografia.html">Bibliografía</a>
+            <a href="contacto.html">Contacto</a>
+
+        </nav>
+
+
+    </header>
+    <main class="hero">
+        <div class="hero-texto">
+            <h1>Tafur Huayta Marjorie Jhoana</h1>
+
+            <h2 id="typed-text"></h2>
+            <p>Mi misión es diseñar aplicaciónes web innovadoras que resuelva problemas específicos de nuestra
+                comunidad, combinando mis habilidades con un profundo entendimiento de las necesidades locales. Más que
+                código, busco crear soluciones prácticas que mejoren el día a día de las personas, mientras demuestro el
+                potencial del desarrollo de software como herramienta de cambio. ¡Trabajemos juntos para hacer de
+                Huancayo un ejemplo de innovación!"</p>
+        </div>
+        <div class="hero-imagen">
+            <img src="imagen.jpg" alt="Foto de perfil" onclick="toggleDarkMode()">
+        </div>
+    </main>
+
+
+</body>
+<footer>
+    <p>&copy; 2025. Tafur Huayta Marjorie Jhoana</p>
+
+
+</footer>
+<script>
+
+
+    const typedText = document.getElementById("typed-text");
+    const frases = [
+        "Desarrolladora Web",
+        "Ingeniería de Sistemas"
+    ];
+
+    let fraseIndex = 0;
+    let charIndex = 0;
+    let currentText = "";
+
+    function escribir() {
+        if (fraseIndex < frases.length) {
+            const currentFrase = frases[fraseIndex];
+            if (charIndex < currentFrase.length) {
+                currentText += currentFrase.charAt(charIndex);
+                typedText.innerHTML = currentText + '<span class="cursor">|</span>';
+                charIndex++;
+                setTimeout(escribir, 50);
+            } else {
+                currentText += "<br>"; // salto de línea después de una frase completa
+                fraseIndex++;
+                charIndex = 0;
+                setTimeout(escribir, 500); // pausa antes de la siguiente frase
+            }
+        } else {
+            // una vez terminado, quitamos el cursor
+            typedText.innerHTML = currentText;
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", escribir);
+
+    function toggleDarkMode() {
+        document.body.classList.toggle("dark");
+        // Guardar estado en localStorage
+        const isDark = document.body.classList.contains("dark");
+        localStorage.setItem("darkMode", isDark);
+    }
+    document.addEventListener("DOMContentLoaded", () => {
+        // Leer preferencia guardada
+        const darkMode = localStorage.getItem("darkMode") === "true";
+        if (darkMode) {
+            document.body.classList.add("dark");
+        }
+    });
+
+</script>
+
+
+
+</html>
