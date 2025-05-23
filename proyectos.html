@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Mi Portafolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <header class="header">
+    <h1>Bienvenid@ a mi portafolio</h1>
+    <button class="dark-toggle" onclick="toggleDarkMode()">🌙 Modo Oscuro</button>
+
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="sobre-mi.html">Sobre mí</a>
+      <a href="proyectos.html">Proyectos</a>
+      <a href="cuaderno.html">Cuaderno</a>
+      <a href="bibliografia.html">Bibliografía</a>
+      <a href="contacto.html">Contacto</a>
+
+    </nav>
+
+
+  </header>
+  <main>
+    <section class="proyectos">
+      <h2>Proyectos Realizados</h2>
+
+      <div class="proyecto-card">
+        <h3>Detección de Fake News</h3>
+        <p>Modelo de machine learning entrenado para identificar noticias falsas en medios peruanos. Incluye una
+          interfaz para ver el porcentaje de veracidad.</p>
+        <p><strong>Tecnologías:</strong> Python, scikit-learn, Flask</p>
+      </div>
+
+      <div class="proyecto-card">
+        <h3>Sistema de Venta de Laptops</h3>
+        <p>Software para registrar clientes, generar facturas, controlar inventario y gestionar ventas para una tienda
+          de computadoras.</p>
+        <p><strong>Tecnologías:</strong> PHP, MySQL, HTML, CSS, JS</p>
+      </div>
+
+      <div class="proyecto-card">
+        <h3>Mi Portafolio Web</h3>
+        <p>Este portafolio que estás viendo, diseñado con HTML, CSS, modo oscuro y múltiples páginas.</p>
+        <p><strong>Tecnologías:</strong> HTML, CSS, JavaScript</p>
+      </div>
+
+      <div class="proyecto-card">
+        <h3>Juego de Tic-Tac-Toe</h3>
+        <p>Mini juego para dos jugadores implementado desde cero con JavaScript, lógica de turnos y detección de
+          ganador.</p>
+        <p><strong>Tecnologías:</strong> HTML, CSS, JavaScript</p>
+      </div>
+    </section>
+  </main>
+
+
+
+</body>
+<footer>
+  <p>&copy; 2025. Tafur Huayta Marjorie Jhoana</p>
+
+
+</footer>
+<script>
+
+
+  function toggleDarkMode() {
+    document.body.classList.toggle("dark");
+    // Guardar estado en localStorage
+    const isDark = document.body.classList.contains("dark");
+    localStorage.setItem("darkMode", isDark);
+  }
+  document.addEventListener("DOMContentLoaded", () => {
+    // Leer preferencia guardada
+    const darkMode = localStorage.getItem("darkMode") === "true";
+    if (darkMode) {
+      document.body.classList.add("dark");
+    }
+  });
+
+</script>
+
+
+
+</html>
