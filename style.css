@@ -1,0 +1,676 @@
+/*=========================================
+=            Variables Globales           =
+=========================================*/
+:root {
+    --bg: #f7f5f0;
+    --text: #3a3a3a;
+    --accent: #8a9a5b;
+    /* Verde salvia más saturado (mejor visibilidad) */
+    --accent-light: #a8b78a;
+    /* Verde hover más oscuro que el original */
+    --highlight: #b08e5a;
+    /* Marrón más cálido */
+    --card-bg: #fffdfa;
+    --hover-bg: #e7e9dd;
+    --text-dark: #e8eae0;
+    /* Texto más claro (antes #d6d8cc) */
+    --card-bg-dark: #23281d;
+    /* Fondo más oscuro (antes #2a2f22) */
+
+}
+
+
+
+/*=========================================
+=                General                  =
+=========================================*/
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    transition: background 0.3s ease, color 0.3s ease;
+    overflow-y: scroll;
+    /* Siempre muestra espacio para scroll (evita saltos de contenido) */
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE/Edge */
+
+}
+
+h2 {
+    letter-spacing: -0.03em;
+    /* Más compacto y profesional */
+}
+
+/*=========================================
+=               Encabezado                =
+=========================================*/
+header.header {
+    position: fixed;
+    /* Fija el header */
+    top: 0;
+    /* Lo pega arriba */
+    left: 0;
+    /* Lo pega a la izquierda */
+    width: 100%;
+    /* Ancho completo */
+    z-index: 1000;
+    /* Asegura que esté por encima de todo */
+    height: 100;
+    background-color: var(--card-bg);
+    padding: 2rem 1rem 1rem;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+
+
+
+
+.header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    color: var(--accent);
+    font-weight: 700;
+}
+
+/*=========================================
+=               Navegación                =
+=========================================*/
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--card-bg);
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--accent);
+    font-weight: 600;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background-color: var(--hover-bg);
+    color: var(--accent-light);
+}
+
+/*=========================================
+=                Hero                     =
+=========================================*/
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 3rem 2rem;
+    max-width: 850px;
+    margin: auto;
+    padding-top: 175px;
+    /* Ajusta este valor según necesites */
+
+}
+
+.hero-texto {
+    flex: 1;
+    min-width: 200px;
+    text-align: right;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.hero-texto h2 {
+    font-size: 2.5rem;
+    color: var(--accent);
+    margin: 0;
+}
+
+.hero-texto p {
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    color: var(--text);
+}
+
+/* Imagen de perfil */
+.hero-imagen {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-imagen img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid var(--accent);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.hero-imagen img:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+/*=========================================
+=               Texto animado            =
+=========================================*/
+#typed-text {
+    min-height: 3.5em;
+    /* Ajusta según el tamaño de fuente */
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+    white-space: pre-wrap;
+}
+
+.cursor {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+/*=========================================
+=              Footer                     =
+=========================================*/
+footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: #888;
+    margin-top: 3rem;
+}
+
+/*=========================================
+=          Botón de modo oscuro           =
+=========================================*/
+.dark-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1000;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.dark-toggle:hover {
+    background: var(--accent-light);
+}
+
+/*=========================================
+=              Modo Oscuro                =
+=========================================*/
+body.dark {
+    --bg: #1a1c14;
+    /* Verde muy oscuro, casi negro con matiz verde */
+    --text: var(--text-dark);
+    /* Usa la nueva variable para texto */
+    /* Verde muy claro, casi blanco con matiz */
+    --accent: #9cad84;
+    /* Verde original para modo oscuro */
+    /* Verde salvia oscuro */
+    --accent-light: #b2c18a;
+    /* Verde salvia claro para hover */
+    --highlight: #7f6a4d;
+    /* Marrón oscuro */
+    --card-bg: var(--card-bg-dark);
+    /* Fondo de tarjetas oscuro, pero con tono verde/marrón */
+    --hover-bg: #3a4431;
+    /* Hover un poco más claro para botones */
+}
+
+
+
+
+
+
+
+/* SOBRE MI ---------------------------------------------------------------------*/
+/* Sección sobre mí y educación */
+main {
+
+    max-width: 850px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    line-height: 1.6;
+    color: var(--text);
+    padding-top: 150px;
+    /* Ajusta este valor según necesites */
+
+}
+
+main section {
+    margin-bottom: 2.5rem;
+    background-color: var(--card-bg);
+    padding: 1.5rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s ease;
+}
+
+main section:hover {
+    background-color: var(--hover-bg);
+}
+
+main section h2 {
+    color: var(--accent);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+
+
+/*CONOCIMIENTOS-----------------------------------------------------------*/
+.aprendizajes {
+    padding: 2rem;
+    max-width: 800px;
+
+}
+
+.aprendizajes h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--accent);
+    text-align: center;
+}
+
+.apr-card {
+    background-color: var(--card-bg);
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+}
+
+.apr-info h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: var(--text);
+}
+
+.apr-info p {
+    margin: 0.3rem 0;
+    font-size: 0.95rem;
+    color: var(--text);
+}
+
+.apr-fuente {
+    font-style: italic;
+    font-size: 0.85rem;
+    color: var(--accent);
+}
+
+
+/*CERTIFICADOS-----------------------------*/
+.certificados {
+    padding: 2rem;
+    max-width: 800px;
+    margin: auto;
+}
+
+.certificados h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--accent);
+    text-align: center;
+}
+
+.cert-card {
+    display: flex;
+    align-items: center;
+    background-color: var(--card-bg);
+    padding: 1rem;
+    border-radius: 12px;
+    gap: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--hover-bg);
+    /* Define los bordes sin romper el estilo */
+
+
+}
+
+/* Número grande al inicio */
+.cert-num {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--accent);
+    min-width: 32px;
+    text-align: center;
+}
+
+/* Texto del certificado */
+.cert-info {
+    flex: 1;
+}
+
+.cert-info h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--text);
+}
+
+.cert-info p {
+    margin: 0.3rem 0 0;
+    font-size: 0.9rem;
+    color: var(--text);
+}
+
+/* Imagen a la derecha */
+.cert-card img {
+    height: 120px;
+    object-fit: contain;
+    border-radius: 12px;
+
+}
+
+.verified-icon {
+    color: var(--accent);
+    font-size: 0.9em;
+    margin-left: 0.3rem;
+}
+
+
+
+/* PROYECTOS------------------------------------------------------------------------------------- */
+.proyectos {
+    padding: 2rem;
+}
+
+.proyecto-card {
+    background-color: var(--card-bg);
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+}
+
+.proyecto-card h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: var(--text);
+}
+
+.proyecto-card p {
+    margin: 0.3rem 0;
+    font-size: 0.95rem;
+    color: var(--text);
+}
+
+/*CUADERNO------------------------------------------------------------------------------------------------------------------------*/
+/* CUADERNO DE APRENDIZAJE */
+.cuaderno {
+    padding: 2rem;
+    max-width: 900px;
+    margin: auto;
+}
+
+.cuaderno h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--accent);
+    /* puedes personalizar este color */
+    text-align: center;
+}
+
+.cuaderno-card {
+    display: flex;
+    align-items: flex-start;
+    background-color: var(--card-bg);
+    padding: 1.2rem;
+    border-radius: 12px;
+    gap: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin-bottom: 1.5rem;
+    border-left: 6px solid #9cad84;
+    border: 1px solid var(--hover-bg);
+    /* Define los bordes sin romper el estilo */
+
+}
+
+
+
+.cuaderno-num {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #9cad84;
+    /* Marrón claro */
+    min-width: 40px;
+    text-align: center;
+}
+
+.cuaderno-info {
+    flex: 1;
+}
+
+.cuaderno-info h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.3rem;
+    color: var(--text);
+}
+
+.cuaderno-info p {
+    margin: 0.4rem 0;
+    font-size: 0.95rem;
+    color: var(--text);
+}
+
+.cuaderno-card.final {
+    border-left: 6px solid var(--accent);
+    /* Usamos tu color acento principal */
+    background-color: var(--accent-light);
+    /* Fondo con la versión clara del acento */
+    color: var(--text);
+    /* Color de texto normal */
+}
+
+/* Texto dentro de la card final */
+.cuaderno-card.final h3,
+.cuaderno-card.final p {
+    color: var(--text);
+    /* Mantenemos legibilidad */
+}
+
+/* Modo oscuro - ajustes específicos */
+body.dark .cuaderno-card.final {
+    background-color: var(--accent);
+    /* Verde más intenso en oscuro */
+    border-left-color: var(--accent-light);
+    /* Borde más claro para contraste */
+}
+
+body.dark .cuaderno-card.final h3,
+body.dark .cuaderno-card.final p {
+    color: var(--bg);
+    /* Texto en color de fondo claro para máximo contraste */
+}
+
+.cuaderno-card.final {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cuaderno-card.final:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+/*=========================================
+=           Estilos para Contacto          =
+=========================================*/
+
+/*=========================================
+=           Estilos para Contacto          =
+=========================================*/
+.contacto-section {
+    max-width: 800px;
+    /* Mismo ancho que otras secciones */
+    padding: 2rem;
+    background-color: var(--card-bg);
+    /* Usa tu variable de tarjetas */
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Sombra similar a tus cards */
+}
+
+.contacto-section h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--accent);
+    /* Color de acento consistente */
+    font-size: 2rem;
+    /* Igual que otros títulos de sección */
+}
+
+.formulario-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    /* Espaciado consistente */
+}
+
+.formulario-contacto label {
+    font-weight: 600;
+    /* Negrita similar a otros textos */
+    color: var(--text);
+    /* Color de texto principal */
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+    padding: 0.8rem;
+    border-radius: 8px;
+    border: 1px solid var(--accent-light);
+    /* Borde con tu color claro */
+    background-color: var(--card-bg);
+    /* Fondo coherente */
+    color: var(--text);
+    /* Texto legible en ambos modos */
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border 0.3s ease;
+}
+
+.formulario-contacto input:focus,
+.formulario-contacto textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    /* Resaltado con color principal */
+}
+
+.formulario-contacto button {
+    background-color: var(--accent);
+    /* Color de acento */
+    color: white;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 400;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+}
+
+.formulario-contacto button:hover {
+    background-color: var(--accent-light);
+    /* Hover con tu variable */
+}
+
+/* Modo oscuro (ya se aplica automáticamente con tus variables) */
+
+
+
+
+@media (max-width: 600px) {
+    :root {
+        --accent: #7d8c4f;
+        /* Verde un poco más oscuro en móviles */
+    }
+}
+
+
+/*---------------------SEMANAAS--------------------------*/
+.cuaderno-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.semana-post {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  background-color: #f2f2f2;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 8px #3a3a3a;
+  transition: transform 0.2s, box-shadow 0.2s;
+  color: inherit;
+}
+
+.semana-post img {
+  width: 100%;
+  height: auto;
+  max-height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.semana-post span {
+  font-weight: bold;
+  text-align: center;
+}
+
+.semana-post:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+body.dark .semana-post {
+  background-color: #1a1c14;
+  color: #f0f0f0;
+  box-shadow: 0 4px 8px #1a1c14;
+}
+
+body.dark .semana-post:hover {
+  box-shadow: 0 6px 12px #1a1c14;
+}
+
+.semana-detalle {
+  position: relative;
+  padding: 2rem;
+  border-radius: 12px;
+  background-color: var(--card-color); /* Mantiene el fondo base */
+  overflow: hidden;
+}
+
+
+
+/* Contenido encima del fondo */
+.semana-detalle * {
+  position: relative;
+  z-index: 1;
+}

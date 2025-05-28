@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Semana 2</title>
+  <script src="scripts.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="header">
+    <h1>Semana 2 - Cuaderno de Aprendizaje</h1>
+    <button class="dark-toggle" onclick="toggleDarkMode()">🌙 Modo Oscuro</button>
+    <nav><a href="cuaderno.html">⬅ Volver al Cuaderno</a></nav>
+  </header>
+  <main>
+    <section class="semana-detalle">
+      <h2>📘 Semana 2: Sintaxis Emmet</h2>
+
+      <p><strong>Temas aprendidos:</strong></p>
+      <ul>
+        <li>Aprendizaje de abreviaciones de Emmet para escribir HTML más rápido.</li>
+        <li>Uso de Emmet en Visual Studio Code.</li>
+        <li>Prácticas de expansión automática de etiquetas, clases y estructuras anidadas.</li>
+      </ul>
+
+      <p><strong>Ejercicios / Resultados:</strong></p>
+      <ul>
+        <li>Se escribieron estructuras HTML complejas usando solo Emmet.</li>
+        <li>Se utilizaron atajos como `ul>li*5` para generar listas rápidamente.</li>
+        <li>Se comprendió cómo combinar múltiples atajos para obtener estructuras completas.</li>
+        <li><a href="https://github.com/Marjorie1008/CODIGOS-EMMET" target="_blank">Ver ejercicio realizado</a></li>
+      </ul>
+
+      <p><strong>Reflexión personal:</strong></p>
+      <p>Durante esta semana, profundicé en el tema de sintaxis emmet. Fue una experiencia enriquecedora que me permitió
+        consolidar los conceptos mediante práctica constante. Pude notar avances en mi comprensión del desarrollo web y
+        adquirí habilidades que podré aplicar en proyectos reales.</p>
+
+      <img src="emmet.jpeg" alt="Sintaxis Emmet - Semana 2"
+        style="width: 120px; max-width: 600px; margin: 20px auto; border-radius: 8px; display: block;">
+    </section>
+  </main>
+  <style>
+    .semana-detalle::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("emmet.jpeg");
+      background-size: cover;
+      background-position: center;
+      opacity: 0.08;
+      /* Controla cuán visible es la imagen */
+      z-index: 0;
+      pointer-events: none;
+      filter: blur(2px);
+      border-radius: 12px;
+    }
+  </style>
+  <footer>
+    <p>&copy; 2025. Tafur Huayta Marjorie Jhoana</p>
+  </footer>
+</body>
+
+</html>
