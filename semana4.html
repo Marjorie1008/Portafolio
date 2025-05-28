@@ -1,0 +1,62 @@
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Semana 4</title>
+  <script src="scripts.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="header">
+    <h1>Semana 4 - Cuaderno de Aprendizaje</h1>
+    <button class="dark-toggle" onclick="toggleDarkMode()">🌙 Modo Oscuro</button>
+    <nav><a href="cuaderno.html">⬅ Volver al Cuaderno</a></nav>
+  </header>
+  <main>
+    <section class="semana-detalle">
+      <h2>📘 Semana 4: CSS Básico y Avanzado</h2>
+      <p><strong>Temas aprendidos:</strong></p>
+      <ul>
+        <li>Selección de elementos con selectores CSS.</li>
+        <li>Propiedades de estilo, cajas, tipografía y colores.</li>
+        <li>Modelo de caja, posicionamiento y flexbox.</li>
+      </ul>
+      <p><strong>Ejercicios / Resultados:</strong></p>
+      <ul>
+        <li>Diseño de una página usando colores y espaciados personalizados.</li>
+        <li>Uso de `flexbox` para estructurar secciones.</li>
+        <li><a href="https://github.com/ame1805/PracticaCalificada" target="_blank">Ver ejercicio realizado</a></li>
+      </ul>
+      <p><strong>Reflexión personal:</strong></p>
+      <p>Comprender CSS me permitió darle vida a mis estructuras HTML. Aprendí que un diseño bien hecho mejora la
+        experiencia de usuario, y que herramientas como flexbox facilitan la distribución visual.</p>
+      <img src="css.jpg" alt="CSS Básico y Avanzado - Semana 4"
+        style="width: 120px; max-width: 600px; margin: 20px auto; border-radius: 8px; display: block;">
+      <style>
+        .semana-detalle::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-image: url("css.jpg");
+          background-size: cover;
+          background-position: center;
+          opacity: 0.08;
+          /* Controla cuán visible es la imagen */
+          z-index: 0;
+          pointer-events: none;
+          filter: blur(2px);
+          border-radius: 12px;
+        }
+      </style>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025. Tafur Huayta Marjorie Jhoana</p>
+  </footer>
+</body>
+
+</html>

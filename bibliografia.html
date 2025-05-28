@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Portafolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <h1>Bienvenid@ a mi portafolio</h1>
+        <button class="dark-toggle" onclick="toggleDarkMode()">🌙 Modo Oscuro</button>
+
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="sobre-mi.html">Sobre mí</a>
+            <a href="proyectos.html">Proyectos</a>
+            <a href="cuaderno.html">Cuaderno</a>
+            <a href="bibliografia.html">Bibliografía</a>
+            <a href="contacto.html">Contacto</a>
+
+        </nav>
+
+
+    </header>
+
+    <main class="contenido">
+        <section>
+            <h2>Libros</h2>
+            <ul>
+                <li>Freeman, Eric & Robson, Elisabeth. <strong>Head First HTML and CSS</strong>. O'Reilly Media, 2012.
+                </li>
+                <li>Duckett, Jon. <strong>HTML and CSS: Design and Build Websites</strong>. Wiley, 2011.</li>
+                <li>McFarland, David Sawyer. <strong>JavaScript & jQuery: The Missing Manual</strong>. O'Reilly Media,
+                    2014.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Páginas web y documentación</h2>
+            <ul>
+                <li><a href="https://developer.mozilla.org/es/" target="_blank">MDN Web Docs</a> – Documentación oficial
+                    sobre HTML, CSS y JavaScript.</li>
+                <li><a href="https://www.w3schools.com/" target="_blank">W3Schools</a> – Referencia práctica para
+                    tecnologías web.</li>
+                <li><a href="https://css-tricks.com/" target="_blank">CSS-Tricks</a> – Recursos y artículos sobre diseño
+                    con CSS.</li>
+                <li><a href="https://stackoverflow.com/" target="_blank">Stack Overflow</a> – Comunidad para resolver
+                    dudas técnicas.</li>
+                <li><a href="https://getbootstrap.com/" target="_blank">Bootstrap</a> – Framework para diseño web
+                    responsive.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Recursos de clase y monografías</h2>
+            <ul>
+                <li><a href="MONOGRAFÍA - HTML BÁSICO.pdf" target="_blank">Monografía: HTML Básico</a></li>
+                <li><a href="MONOGRAFÍA- HTML AVANZADO.pdf" target="_blank">Monografía: HTML Avanzado</a></li>
+                <li><a href="MONOGRAFÍA - CSS BÁSICO.pdf" target="_blank">Monografía: CSS Básico</a></li>
+                <li><a href="MONOGRAFÍA CSS AVANZADO.pdf" target="_blank">Monografía: CSS Avanzado</a></li>
+                <li><a href="GRUPO 5 MONOGRAFIA - CSS CON BOOTSTRAP.pdf" target="_blank">Monografía: CSS con
+                        Bootstrap</a></li>
+                <li><a href="MONOGRAFÍA - Tailwind CSS .pdf" target="_blank">Monografía: CSS con Tailwind</a></li>
+                <li><a href="MONOGRAFÍA-GRUPO 7-JAVASCRIPT.pdf" target="_blank">Monografía: JavaScript Básico</a></li>
+            </ul>
+        </section>
+
+
+    </main>
+
+
+
+</body>
+<footer>
+    <p>&copy; 2025. Tafur Huayta Marjorie Jhoana</p>
+
+
+</footer>
+<script>
+
+
+    function toggleDarkMode() {
+        document.body.classList.toggle("dark");
+        // Guardar estado en localStorage
+        const isDark = document.body.classList.contains("dark");
+        localStorage.setItem("darkMode", isDark);
+    }
+    document.addEventListener("DOMContentLoaded", () => {
+        // Leer preferencia guardada
+        const darkMode = localStorage.getItem("darkMode") === "true";
+        if (darkMode) {
+            document.body.classList.add("dark");
+        }
+    });
+
+</script>
+
+
+
+</html>
