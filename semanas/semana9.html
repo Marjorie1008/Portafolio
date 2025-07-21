@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Semana 9</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/semana.css">
+  <script src="../js/dark.js" defer></script>
+</head>
+
+<body>
+  <header class="header">
+    <button class="dark-toggle" onclick="toggleDarkMode()">🌙 Modo Oscuro</button>
+    <h1>Semana 9 - Cuaderno de Aprendizaje</h1>
+    <nav>
+      <a href="../cuaderno.html">⬅ Volver al Cuaderno</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="semana-detalle">
+      <h2>Semana 9: Desarrollo Backend con Java Spring</h2>
+      <p><strong>Temas aprendidos:</strong></p>
+      <ul>
+        <li>Introducción al framework Spring y arquitectura MVC.</li>
+        <li>Creación de controladores, servicios y repositorios.</li>
+        <li>Uso de anotaciones como @RestController, @Autowired, @GetMapping.</li>
+      </ul>
+
+      <p><strong>Ejercicios / Resultados:</strong></p>
+      <ul>
+        <li>Se desarrolló una API REST básica con endpoints para gestión de estudiantes.</li>
+        <li>Pruebas con Postman y documentación con Swagger.</li>
+      </ul>
+
+      <p><strong>Reflexión personal:</strong></p>
+      <p>Descubrí el poder de Spring para construir backends robustos y organizados. Me gustó trabajar con su estructura y usar Postman para probar los endpoints. Aunque al inicio fue un poco complejo, poco a poco entendí la importancia del patrón MVC en proyectos grandes.</p>
+
+      <img src="../img/spring.jpeg" alt="Java Spring" style="width: 120px; max-width: 600px; margin: 20px auto; border-radius: 8px; display: block;">
+    </section>
+  </main>
+
+  <style>
+    .semana-detalle::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("../img/spring.jpeg");
+      background-size: cover;
+      background-position: center;
+      opacity: 0.05;
+      z-index: 0;
+      pointer-events: none;
+      filter: blur(3px);
+      border-radius: 12px;
+    }
+  </style>
+
+  <footer>
+    <p>&copy; 2025. Tafur Huayta Marjorie Jhoana</p>
+  </footer>
+</body>
+
+</html>

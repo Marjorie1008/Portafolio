@@ -1,0 +1,32 @@
+nav a.active {
+  background-color: var(--accent);
+  color: white;
+  position: relative;
+  font-weight: 700;
+  transition: all 0.3s ease-in-out;
+  border-radius: 8px;
+}
+
+nav a.active::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 3px;
+  background-color: var(--highlight);
+  border-radius: 2px;
+  animation: fadeLine 0.5s ease-in-out;
+}
+
+@keyframes fadeLine {
+  0% {
+    width: 0%;
+    opacity: 0;
+  }
+  100% {
+    width: 60%;
+    opacity: 1;
+  }
+}

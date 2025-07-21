@@ -1,0 +1,62 @@
+main {
+    max-width: 850px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    line-height: 1.6;
+    color: var(--text);
+    padding-top: 100px;
+}
+
+.proyectos {
+    max-width: 850px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.proyectos h2 {
+    color: var(--accent);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.proyecto-card {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+    border-left: 4px solid var(--accent); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.proyecto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.proyecto-card h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.3rem;
+    color: var(--accent); 
+}
+
+.proyecto-card p {
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+    color: var(--text);
+    line-height: 1.5;
+}
+
+.proyecto-card strong {
+    color: var(--accent);
+}
+
+.proyecto-card p:last-child {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    background-color: var(--hover-bg);
+    padding: 0.3rem 0.6rem;
+    border-radius: 20px;
+    display: inline-block;
+}

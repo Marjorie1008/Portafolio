@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Semana 14</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/semana.css">
+  <script src="../js/dark.js" defer></script>
+</head>
+
+<body>
+  <header class="header">
+    <button class="dark-toggle" onclick="toggleDarkMode()">🌙 Modo Oscuro</button>
+    <h1>Semana 14 - Cuaderno de Aprendizaje</h1>
+    <nav>
+      <a href="../cuaderno.html">⬅ Volver al Cuaderno</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="semana-detalle">
+      <h2>Semana 14: Backend con Python y Flask</h2>
+      <p><strong>Temas aprendidos:</strong></p>
+      <ul>
+        <li>Creación de rutas y vistas con Flask.</li>
+        <li>Uso de Jinja2 para renderizado de plantillas.</li>
+        <li>Conexión con SQLite para almacenamiento de datos.</li>
+        <li>Despliegue local y pruebas de endpoints con Postman.</li>
+      </ul>
+
+      <p><strong>Ejercicios / Resultados:</strong></p>
+      <ul>
+        <li>API REST con operaciones CRUD básicas.</li>
+        <li>Formularios con validación usando Flask-WTF.</li>
+      </ul>
+
+      <p><strong>Reflexión personal:</strong></p>
+      <p>Flask me pareció muy flexible y rápido para crear backends funcionales. Me gustó lo intuitivo de su sintaxis y la forma en que se integra con SQLite. Ideal para proyectos pequeños y medianos.</p>
+
+      <img src="../img/flask.png" alt="Python Flask" style="width: 120px; max-width: 600px; margin: 20px auto; border-radius: 8px; display: block;">
+    </section>
+  </main>
+
+  <style>
+    .semana-detalle::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("../img/flask.png");
+      background-size: cover;
+      background-position: center;
+      opacity: 0.05;
+      z-index: 0;
+      pointer-events: none;
+      filter: blur(3px);
+      border-radius: 12px;
+    }
+  </style>
+
+  <footer>
+    <p>&copy; 2025. Tafur Huayta Marjorie Jhoana</p>
+  </footer>
+</body>
+
+</html>

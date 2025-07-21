@@ -1,0 +1,64 @@
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Semana 8</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
+
+ <link rel="stylesheet" href="../css/semana.css">
+  <script src="../js/dark.js" defer></script>
+</head>
+
+<body>
+  <header class="header">
+    <h1>Semana 8 - Cuaderno de Aprendizaje</h1>
+    <nav><a href="../cuaderno.html">⬅ Volver al Cuaderno</a></nav>
+    <button class="dark-toggle" onclick="toggleDarkMode()">🌙 Modo Oscuro</button>
+  </header>
+  <main>
+    <section class="semana-detalle">
+      <h2>Semana 8: Profundizando en React</h2>
+      <p><strong>Temas aprendidos:</strong></p>
+      <ul>
+        <li>Hooks (useState, useEffect).</li>
+        <li>Manejo de listas y formularios.</li>
+        <li>Rutas con React Router.</li>
+      </ul>
+      <p><strong>Ejercicios / Resultados:</strong></p>
+      <ul>
+        <li>Formulario funcional con validación.</li>
+        <li>Aplicación de rutas entre componentes.</li>
+        <li><a href="HooksdeReact.pdf" target="_blank">Ver ejercicio realizado</a></li>
+      </ul>
+      <p><strong>Reflexión personal:</strong></p>
+      <p>Esta semana reforcé mis conocimientos de React. Los hooks me ayudaron a manejar estados y efectos de forma
+        eficiente, y entendí mejor la navegación de una SPA.</p>
+      <img src="../img/react.jpg" alt="React Avanzado - Semana 8"
+        style="width: 120px; max-width: 600px; margin: 20px auto; border-radius: 8px; display: block;">
+      <style>
+        .semana-detalle::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-image: url("../img/react.jpg");
+          background-size: cover;
+          background-position: center;
+          opacity: 0.08;
+          /* Controla cuán visible es la imagen */
+          z-index: 0;
+          pointer-events: none;
+          filter: blur(2px);
+          border-radius: 12px;
+        }
+      </style>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025. Tafur Huayta Marjorie Jhoana</p>
+  </footer>
+</body>
+
+</html>

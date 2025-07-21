@@ -1,0 +1,64 @@
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Semana 7</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
+
+ <link rel="stylesheet" href="../css/semana.css">
+  <script src="../js/dark.js" defer></script>
+</head>
+
+<body>
+  <header class="header">
+    <h1>Semana 7 - Cuaderno de Aprendizaje</h1>
+    <nav><a href="../cuaderno.html">⬅ Volver al Cuaderno</a></nav>
+    <button class="dark-toggle" onclick="toggleDarkMode()">🌙 Modo Oscuro</button>
+  </header>
+  <main>
+    <section class="semana-detalle">
+      <h2>Semana 7: React y Vite</h2>
+      <p><strong>Temas aprendidos:</strong></p>
+      <ul>
+        <li>Creación de proyecto con Vite.</li>
+        <li>Componentes en React.</li>
+        <li>Uso de props, estados y eventos.</li>
+      </ul>
+      <p><strong>Ejercicios / Resultados:</strong></p>
+      <ul>
+        <li>Construcción de componentes reutilizables.</li>
+        <li>Primer sitio con React funcional.</li>
+        <li><a href="ComponentesyJSXenReact.pdf" target="_blank">Ver ejercicio realizado</a></li>
+      </ul>
+      <p><strong>Reflexión personal:</strong></p>
+      <p>React me pareció muy poderoso para crear interfaces. Vite facilitó el entorno de desarrollo por su velocidad.
+        Aprendí a dividir mi interfaz en piezas pequeñas y reutilizables.</p>
+      <img src="../img/rv.jpeg" alt="React y Vite - Semana 7"
+        style="width: 120px; max-width: 600px; margin: 20px auto; border-radius: 8px; display: block;">
+      <style>
+        .semana-detalle::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-image: url("../img/rv.jpeg");
+          background-size: cover;
+          background-position: center;
+          opacity: 0.08;
+          /* Controla cuán visible es la imagen */
+          z-index: 0;
+          pointer-events: none;
+          filter: blur(2px);
+          border-radius: 12px;
+        }
+      </style>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025. Tafur Huayta Marjorie Jhoana</p>
+  </footer>
+</body>
+
+</html>

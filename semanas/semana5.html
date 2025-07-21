@@ -1,0 +1,67 @@
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Semana 5</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Raleway:wght@300;400;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/semana.css">
+  <script src="../js/dark.js" defer></script>
+</head>
+
+<body>
+  <header class="header">
+    <h1>Semana 5 - Cuaderno de Aprendizaje</h1>
+    <button class="dark-toggle" onclick="toggleDarkMode()">🌙 Modo Oscuro</button>
+    <nav><a href="../cuaderno.html">⬅ Volver al Cuaderno</a></nav>
+  </header>
+  <main>
+    <section class="semana-detalle">
+      <h2>Semana 5: Bootstrap y Tailwind CSS</h2>
+      <p><strong>Temas aprendidos:</strong></p>
+      <ul>
+        <li>Instalación y uso de Bootstrap para componentes rápidos.</li>
+        <li>Introducción a Tailwind CSS y utilidad de clases personalizadas.</li>
+        <li>Comparación de enfoques entre ambos frameworks.</li>
+      </ul>
+      <p><strong>Ejercicios / Resultados:</strong></p>
+      <ul>
+        <li>Creación de una página con navbar y tarjetas con Bootstrap.</li>
+        <li>Creación de un sitio minimalista con Tailwind CSS.</li>
+        <li><a href="https://github.com/Marjorie1008/TAILWIND---BOOTSTRAP" target="_blank">Ver ejercicio realizado</a>
+        </li>
+      </ul>
+      <p><strong>Reflexión personal:</strong></p>
+      <p>Aprendí a elegir el framework adecuado para el proyecto según la complejidad y personalización deseada.
+        Tailwind me pareció más flexible, mientras que Bootstrap fue rápido y directo.</p>
+      <img src="../img/tailwind.png" alt="Bootstrap y Tailwind - Semana 5"
+        style="width: 120px; max-width: 600px; margin: 20px auto; border-radius: 8px; display: block;">
+      <style>
+        .semana-detalle::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-image: url("../img/tailwind.png");
+          background-size: cover;
+          background-position: center;
+          opacity: 0.08;
+          /* Controla cuán visible es la imagen */
+          z-index: 0;
+          pointer-events: none;
+          filter: blur(2px);
+          border-radius: 12px;
+        }
+      </style>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025. Tafur Huayta Marjorie Jhoana</p>
+  </footer>
+</body>
+
+</html>

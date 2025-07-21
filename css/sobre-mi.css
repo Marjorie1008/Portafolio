@@ -1,0 +1,172 @@
+
+main {
+    max-width: 850px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    line-height: 1.6;
+    color: var(--text);
+    padding-top: 150px;
+}
+
+main section {
+    margin-bottom: 2.5rem;
+    background-color: var(--card-bg);
+    padding: 1.5rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s ease;
+}
+
+main section:hover {
+    background-color: var(--hover-bg);
+}
+
+main section h2 {
+    color: var(--accent);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+
+
+.aprendizajes {
+    padding: 2rem;
+    max-width: 800px;
+
+}
+
+.aprendizajes h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--accent);
+    text-align: center;
+}
+
+.apr-card {
+    background-color: var(--card-bg);
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+}
+
+.apr-info h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: var(--text);
+}
+
+.apr-info p {
+    margin: 0.3rem 0;
+    font-size: 0.95rem;
+    color: var(--text);
+}
+
+.apr-fuente {
+    font-style: italic;
+    font-size: 0.85rem;
+    color: var(--accent);
+}
+
+
+.certificados {
+    padding: 2rem;
+    max-width: 800px;
+    margin: auto;
+}
+
+.certificados h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--accent);
+    text-align: center;
+}
+
+.cert-card {
+    display: flex;
+    align-items: center;
+    background-color: var(--card-bg);
+    padding: 1rem;
+    border-radius: 12px;
+    gap: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--hover-bg);
+
+
+}
+
+.cert-num {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--accent);
+    min-width: 32px;
+    text-align: center;
+}
+
+.cert-info {
+    flex: 1;
+}
+
+.cert-info h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--text);
+}
+
+.cert-info p {
+    margin: 0.3rem 0 0;
+    font-size: 0.9rem;
+    color: var(--text);
+}
+
+.cert-card img {
+    height: 120px;
+    object-fit: contain;
+    border-radius: 12px;
+
+}
+
+.verified-icon {
+    color: var(--accent);
+    font-size: 0.9em;
+    margin-left: 0.3rem;
+}
+
+.skill-card {
+  background-color: var(--card-bg);
+  padding: 1.2rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.skill-info h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+.skill-bar {
+  width: 100%;
+  height: 10px;
+  background-color: var(--hover-bg);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.skill-progress {
+  height: 100%;
+  background-color: var(--accent);
+  border-radius: 10px;
+  position: relative;
+  transition: width 0.5s ease-in-out;
+}
+
+.skill-progress::after {
+  content: attr(data-percent);
+  position: absolute;
+  right: 5px;
+  top: -20px;
+  font-size: 0.8rem;
+  color: var(--text);
+}

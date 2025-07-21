@@ -1,0 +1,179 @@
+
+main {
+    max-width: 850px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    line-height: 1.6;
+    color: var(--text);
+    padding-top: 150px;
+}
+
+main section {
+    margin-bottom: 2.5rem;
+    background-color: var(--card-bg);
+    padding: 1.5rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s ease;
+}
+
+main section:hover {
+    background-color: var(--hover-bg);
+}
+
+main section h2 {
+    color: var(--accent);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+
+.cuaderno {
+    padding: 2rem;
+    max-width: 900px;
+    margin: auto;
+}
+
+.cuaderno h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--accent);
+    text-align: center;
+}
+
+.cuaderno-card {
+    display: flex;
+    align-items: flex-start;
+    background-color: var(--card-bg);
+    padding: 1.2rem;
+    border-radius: 12px;
+    gap: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin-bottom: 1.5rem;
+    border-left: 6px solid #9cad84;
+    border: 1px solid var(--hover-bg);
+
+}
+
+
+
+.cuaderno-num {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #9cad84;
+    /* Marrón claro */
+    min-width: 40px;
+    text-align: center;
+}
+
+.cuaderno-info {
+    flex: 1;
+}
+
+.cuaderno-info h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.3rem;
+    color: var(--text);
+}
+
+.cuaderno-info p {
+    margin: 0.4rem 0;
+    font-size: 0.95rem;
+    color: var(--text);
+}
+
+.cuaderno-card.final {
+    border-left: 6px solid var(--accent);
+    background-color: var(--accent-light);
+    color: var(--text);
+}
+
+.cuaderno-card.final h3,
+.cuaderno-card.final p {
+    color: var(--text);
+}
+
+body.dark .cuaderno-card.final {
+    background-color: var(--accent);
+    border-left-color: var(--accent-light);
+}
+
+body.dark .cuaderno-card.final h3,
+body.dark .cuaderno-card.final p {
+    color: var(--bg);
+}
+
+.cuaderno-card.final {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cuaderno-card.final:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/*---------------------SEMANAAS--------------------------*/
+.cuaderno-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.semana-post {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  background-color: #f2f2f2;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 8px #3a3a3a;
+  transition: transform 0.2s, box-shadow 0.2s;
+  color: inherit;
+}
+
+.semana-post img {
+  width: 100%;
+  height: auto;
+  max-height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.semana-post span {
+  font-weight: bold;
+  text-align: center;
+}
+
+.semana-post:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+body.dark .semana-post {
+  background-color: #1a1c14;
+  color: #f0f0f0;
+  box-shadow: 0 4px 8px #1a1c14;
+}
+
+body.dark .semana-post:hover {
+  box-shadow: 0 6px 12px #1a1c14;
+}
+
+.semana-detalle {
+  position: relative;
+  padding: 2rem;
+  border-radius: 12px;
+  background-color: var(--card-color); /* Mantiene el fondo base */
+  overflow: hidden;
+}
+
+
+
+/* Contenido encima del fondo */
+.semana-detalle * {
+  position: relative;
+  z-index: 1;
+}
